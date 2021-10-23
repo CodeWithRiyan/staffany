@@ -4,7 +4,14 @@
 //
 // import { User } from 'path/to/interfaces';
 
-export type User = {
-  id: number
-  name: string
+export interface Absent {
+    id: string
+    day: string
+    shifts: Shift[]
+}
+
+type Shift = {
+    name: string
+    startTime: Date
+    endTime: Date
 }

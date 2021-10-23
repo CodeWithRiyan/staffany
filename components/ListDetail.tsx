@@ -1,16 +1,16 @@
 import * as React from 'react'
 
-import { User } from '../interfaces'
+import { Absent } from '../interfaces'
 
 type ListDetailProps = {
-  item: User
+    item: Absent
 }
 
 const ListDetail = ({ item: user }: ListDetailProps) => (
-  <div>
-    <h1>Detail for {user.name}</h1>
-    <p>ID: {user.id}</p>
-  </div>
+    <div>
+        <h1>Detail for {user.day}</h1>
+        <p>ID: {user.id}</p>
+    </div>
 )
 
 export default ListDetail

@@ -70,7 +70,6 @@ h1,.bar-chart h2 {
   text-align: center;
 }
 .bar-chart .x-axis .label:not(.number) {
-  color: #fff;
   text-transform: uppercase;
   padding-top: 1em;
   font-size: .875em;
