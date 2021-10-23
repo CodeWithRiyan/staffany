@@ -4,9 +4,54 @@ import Layout from '../components/Layout'
 const IndexPage = () => (
   <Layout title="Home | Next.js + TypeScript Example">
     <h1>StaffAny Assessment</h1>
+    <form className="form-label form-css-label">
+    <fieldset>
+      <input id="firstName" name="firstName" type="text"  required />
+      <label htmlFor="firstName">First Name</label>
+    </fieldset>
+    <fieldset>
+      <input id="lastName" name="lastName" type="text"  required />
+      <label htmlFor="lastName">Last Name</label>
+    </fieldset>
+    <fieldset>
+      <input id="email" name="email" type="text"  required />
+      <label htmlFor="email">Email Address</label>
+    </fieldset>
+  </form>
+
+  <form className="form-label form-css-label">
+    <fieldset>
+      <input id="username" name="username" type="text"  required />
+      <label htmlFor="username">Username</label>
+    </fieldset>
+    <fieldset>
+      <input id="password" name="password" type="password"  required />
+      <label htmlFor="password">Password</label>
+    </fieldset>
+    <fieldset>
+      <input id="cpassword" name="cpassword" type="password"  required />
+      <label htmlFor="cpassword">Confirm Password</label>
+    </fieldset>
+  </form>
+  
+  <p>JS-version Animated 'Reminder' Placeholders using &lt;label&gt; supported HTML5 input type</p>
+  <form className="form-label form-js-label">
+    <fieldset>
+      <input id="userName" name="userName" type="text"  required />
+      <label htmlFor="userName">User Name</label>
+    </fieldset>
+    <fieldset>
+      <input id="userEmail" name="userEmail" type="email"  required />
+      <label htmlFor="userEmail">Email Address</label>
+    </fieldset>
+    <fieldset>
+      <input id="description" name="description" type="text"  />
+      <label htmlFor="description">Desciption (not required)</label>
+    </fieldset>
+  </form>
     <button className="btn btn-primary">Click Here</button>
 
-  <div className="modal-open">
+  <div className="modal">
     <div className="modal-content">
       <div className="modal-header">
         <span className="close">&times;</span>
