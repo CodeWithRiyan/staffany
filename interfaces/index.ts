@@ -7,7 +7,7 @@
 export interface Absent {
     id: string
     day: string
-    shifts: Shift[]
+    shifts: Shift[] | []
 }
 
 type Shift = {
