@@ -4,7 +4,7 @@ import Layout from '../components/Layout'
 const IndexPage = () => (
   <Layout title="Home | Next.js + TypeScript Example">
     <h1>StaffAny Assessment</h1>
-    <button className="button">Click Here</button>
+    <button className="btn btn-primary">Click Here</button>
 
   <div className="modal-open">
     <div className="modal-content">
