@@ -4,6 +4,25 @@ import Layout from '../components/Layout'
 const IndexPage = () => (
   <Layout title="Home | Next.js + TypeScript Example">
     <h1>StaffAny Assessment</h1>
+    <button className="button">Click Here</button>
+
+  <div className="modal-open">
+    <div className="modal-content">
+      <div className="modal-header">
+        <span className="close">&times;</span>
+        <h2>Modal Header</h2>
+      </div>
+      <div className="modal-body">
+        <p>This is my modal</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla repellendus nisi, sunt consectetur ipsa velit
+          repudiandae aperiam modi quisquam nihil nam asperiores doloremque mollitia dolor deleniti quibusdam nemo
+          commodi ab.</p>
+      </div>
+      <div className="modal-footer">
+        <h3>Modal Footer</h3>
+      </div>
+    </div>
+  </div>
 <div className="contain">
 
 <figure className="bar-chart">
