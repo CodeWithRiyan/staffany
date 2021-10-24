@@ -10,8 +10,8 @@ export interface Absent {
     shifts: Shift[] | []
 }
 
-type Shift = {
+export type Shift = {
     name: string
-    startTime: Date
-    endTime: Date
+    startTime: number
+    endTime: number
 }

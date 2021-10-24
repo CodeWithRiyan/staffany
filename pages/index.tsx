@@ -22,13 +22,11 @@ type Props = {
 }
 
 const IndexPage = ({ absents }: Props) => {
-    console.log(absents)
-
     return (
         <Layout title="StaffAny Assesment">
             <h1>StaffAny Assessment</h1>
             <Modal />
-            <List />
+            <List absents={absents} />
         </Layout>
     )
 }

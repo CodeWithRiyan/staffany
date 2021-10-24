@@ -1,18 +1,40 @@
 import React from 'react'
 import Link from 'next/link'
 
-import { Absent } from '../interfaces'
+import { Shift } from '../interfaces'
 
 type Props = {
-    data: Absent
+    shifts: Shift[] | []
 }
 
-const ListItem = ({ data }: Props) => (
-    <Link href="/users/[id]" as={`/users/${data.id}`}>
-        <a>
-            {data.id}: {data.day}
-        </a>
-    </Link>
-)
+const ListItem = ({ shifts }: Props) => {
+    let dataList = []
+    const fixShifts = shifts.reverse().forEach((shift, index) => {
+        const endTime = new Date(shift.endTime * 1000)
+    })
+
+    return (
+        <>
+            {shifts.map((shift) => {
+                return (
+                    <>
+                        <span
+                            key={shift.name}
+                            className="bar"
+                            style={{ height: '20%' }}
+                        >
+                            {shift.name}
+                        </span>
+
+                        <span
+                            className="bar"
+                            style={{ height: '12%', background: 'transparent' }}
+                        ></span>
+                    </>
+                )
+            })}
+        </>
+    )
+}
 
 export default ListItem

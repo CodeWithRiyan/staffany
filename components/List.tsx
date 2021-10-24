@@ -1,194 +1,32 @@
 import * as React from 'react'
-import ListItem from './ListItem'
+import { hoursData } from 'utils/sample-data'
 import { Absent } from '../interfaces'
+import ListItem from './ListItem'
 
 type Props = {
-    items?: Absent[]
+    absents?: Absent[]
 }
 
-const List = ({ items }: Props) => (
+const List = ({ absents }: Props) => (
     <div className="contain">
         <figure className="bar-chart">
             <div className="row bars">
                 <div className="y-axis">
-                    <div className="segment">
-                        <span className="label">00:00</span>
-                    </div>
-                    <div className="segment">
-                        <span className="label">01:00</span>
-                    </div>
-                    <div className="segment">
-                        <span className="label">02:00</span>
-                    </div>
-                    <div className="segment">
-                        <span className="label">03:00</span>
-                    </div>
-                    <div className="segment">
-                        <span className="label">04:00</span>
-                    </div>
-                    <div className="segment">
-                        <span className="label">05:00</span>
-                    </div>
-                    <div className="segment">
-                        <span className="label">06:00</span>
-                    </div>
-                    <div className="segment">
-                        <span className="label">07:00</span>
-                    </div>
-                    <div className="segment">
-                        <span className="label">08:00</span>
-                    </div>
-                    <div className="segment">
-                        <span className="label">09:00</span>
-                    </div>
-                    <div className="segment">
-                        <span className="label">10:00</span>
-                    </div>
-                    <div className="segment">
-                        <span className="label">11:00</span>
-                    </div>
-                    <div className="segment">
-                        <span className="label">12:00</span>
-                    </div>
-                    <div className="segment">
-                        <span className="label">13:00</span>
-                    </div>
-                    <div className="segment">
-                        <span className="label">14:00</span>
-                    </div>
-                    <div className="segment">
-                        <span className="label">15:00</span>
-                    </div>
-                    <div className="segment">
-                        <span className="label">16:00</span>
-                    </div>
-                    <div className="segment">
-                        <span className="label">17:00</span>
-                    </div>
-                    <div className="segment">
-                        <span className="label">18:00</span>
-                    </div>
-                    <div className="segment">
-                        <span className="label">19:00</span>
-                    </div>
-                    <div className="segment">
-                        <span className="label">20:00</span>
-                    </div>
-                    <div className="segment">
-                        <span className="label">21:00</span>
-                    </div>
-                    <div className="segment">
-                        <span className="label">22:00</span>
-                    </div>
-                    <div className="segment">
-                        <span className="label">23:00</span>
-                    </div>
-                    <div className="segment">
-                        <span className="label">24:00</span>
-                    </div>
+                    {hoursData.map((hour) => (
+                        <div className="segment" key={hour}>
+                            <span className="label">{hour}</span>
+                        </div>
+                    ))}
                 </div>
                 <div className="x-axis">
-                    <div className="year wrap">
-                        <div className="col">
-                            <span
-                                className="bar"
-                                style={{ height: '35%' }}
-                            ></span>
-                            <span
-                                className="bar"
-                                style={{ height: '35%' }}
-                            ></span>
-                            <span
-                                className="bar"
-                                style={{ height: '26%' }}
-                            ></span>
+                    {absents.map((absent) => (
+                        <div key={absent.id} className="year wrap">
+                            <div className="col">
+                                <ListItem shifts={absent.shifts} />
+                            </div>
+                            <span className="label">{absent.day}</span>
                         </div>
-                        <span className="label">Monday</span>
-                    </div>
-                    <div className="year wrap">
-                        <div className="col"></div>
-                        <span className="label">Sunday</span>
-                    </div>
-                    <div className="year wrap">
-                        <div className="col">
-                            <span
-                                className="bar"
-                                style={{ height: '35%' }}
-                            ></span>
-                            <span
-                                className="bar"
-                                style={{ height: '35%' }}
-                            ></span>
-                            <span className="bar" style={{ height: '26%' }}>
-                                <button></button>
-                            </span>
-                        </div>
-                        <span className="label">Sunday</span>
-                    </div>
-                    <div className="year wrap">
-                        <div className="col">
-                            <span
-                                className="bar"
-                                style={{ height: '35%' }}
-                            ></span>
-                            <span
-                                className="bar"
-                                style={{ height: '35%' }}
-                            ></span>
-                            <span className="bar" style={{ height: '26%' }}>
-                                <button></button>
-                            </span>
-                        </div>
-                        <span className="label">Sunday</span>
-                    </div>
-                    <div className="year wrap">
-                        <div className="col">
-                            <span
-                                className="bar"
-                                style={{ height: '35%' }}
-                            ></span>
-                            <span
-                                className="bar"
-                                style={{ height: '35%' }}
-                            ></span>
-                            <span className="bar" style={{ height: '26%' }}>
-                                <button></button>
-                            </span>
-                        </div>
-                        <span className="label">Sunday</span>
-                    </div>
-                    <div className="year wrap">
-                        <div className="col">
-                            <span
-                                className="bar"
-                                style={{ height: '35%' }}
-                            ></span>
-                            <span
-                                className="bar"
-                                style={{ height: '35%' }}
-                            ></span>
-                            <span className="bar" style={{ height: '26%' }}>
-                                <button></button>
-                            </span>
-                        </div>
-                        <span className="label">Sunday</span>
-                    </div>
-                    <div className="year wrap">
-                        <div className="col">
-                            <span
-                                className="bar"
-                                style={{ height: '35%' }}
-                            ></span>
-                            <span
-                                className="bar"
-                                style={{ height: '35%' }}
-                            ></span>
-                            <span className="bar" style={{ height: '26%' }}>
-                                <button></button>
-                            </span>
-                        </div>
-                        <span className="label">Sunday</span>
-                    </div>
+                    ))}
                 </div>
             </div>
         </figure>
