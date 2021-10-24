@@ -6,9 +6,9 @@ export const sampleAbsentData: Absent[] = [
         id: 'ASD101',
         day: 'Monday',
         shifts: [
-            { name: 'Shift Malam', startTime: 1635094800, endTime: 1635108300 },
-            { name: 'Shift Pagi', startTime: 1635123600, endTime: 1635138000 },
-            { name: 'Shift Siang', startTime: 1635145200, endTime: 1635156000 },
+            { name: 'Shift Malam', startTime: '01:00', endTime: '06:00' },
+            { name: 'Shift Pagi', startTime: '07:00', endTime: '13:00' },
+            { name: 'Shift Siang', startTime: '14:00', endTime: '20:00' },
         ],
     },
     { id: 'ASD102', day: 'Tuesday', shifts: [] },

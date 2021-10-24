@@ -12,6 +12,6 @@ export interface Absent {
 
 export type Shift = {
     name: string
-    startTime: number
-    endTime: number
+    startTime: string
+    endTime: string
 }
