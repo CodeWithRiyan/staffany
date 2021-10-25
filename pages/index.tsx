@@ -1,14 +1,13 @@
 import Layout from 'components/Layout'
 import List from 'components/List'
 import Modal from 'components/Modal'
-import { Absent } from 'interfaces'
+import { Shift } from 'interfaces'
 import { NextPageContext } from 'next'
 const host = !!process.env.NEXT_PUBLIC_VERCEL_URL
     ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
     : 'http://localhost:3000'
 
 export async function getServerSideProps(context: NextPageContext) {
-    const { id, start, coupon } = context.query
     const absentsResult = await fetch(`${host}/api/absents`)
     const absents = await absentsResult.json()
     return {
@@ -18,7 +17,7 @@ export async function getServerSideProps(context: NextPageContext) {
     }
 }
 type Props = {
-    absents?: Absent[]
+    absents?: Shift[]
 }
 
 const IndexPage = ({ absents }: Props) => {

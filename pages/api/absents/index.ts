@@ -1,13 +1,15 @@
 import { NextApiRequest, NextApiResponse } from 'next'
-import { sampleAbsentData } from '../../../utils/sample-data'
+import { getAllData } from 'utils/absent'
 
-const handler = (_req: NextApiRequest, res: NextApiResponse) => {
+const handler = async (_req: NextApiRequest, res: NextApiResponse) => {
     try {
-        if (!Array.isArray(sampleAbsentData)) {
-            throw new Error('Cannot find user data')
-        }
+        const data = await getAllData()
+        let resData = []
+        data.forEach((doc) => {
+            resData.push({ ...doc.data(), id: doc.id })
+        })
 
-        res.status(200).json(sampleAbsentData)
+        res.status(200).json(resData)
     } catch (err) {
         res.status(500).json({ statusCode: 500, message: err.message })
     }

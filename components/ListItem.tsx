@@ -1,6 +1,5 @@
 import React from 'react'
-import Link from 'next/link'
-
+import sortBy from 'lodash/sortBy'
 import { Shift } from '../interfaces'
 
 type Props = {
@@ -18,7 +17,7 @@ const ListItem = ({ shifts }: Props) => {
 
         return fixTotal
     }
-    const reverseShifts = shifts.reverse()
+    const reverseShifts = sortBy(shifts, 'startTime').reverse()
     let dataList = []
     reverseShifts.forEach((shift, index) => {
         if (index === 0 && shift.endTime !== '24:00') {
